@@ -1,0 +1,17 @@
+{
+  "name": "angular_tut",
+  "description": "Following along an Angular1.5 Tutorial",
+  "main": "index.js",
+  "license": "ISC",
+  "homepage": "https://github.com/armin77/angular_tut",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8"
+  }
+}
