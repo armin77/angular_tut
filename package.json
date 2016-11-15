@@ -4,8 +4,7 @@
   "description": "Following along an Angular1.5 Tutorial",
   "main": "index.js",
   "scripts": {
-    "start": "browser-sync start -c \"./bs-config.js\"",
-    //"start": "browser-sync start --server \"./src\" --serveStatic \"./bower_components\" --files \"./src/**/*.*\" "
+    "start": "browser-sync start -c \"./bs-config.js\""
   },
   "repository": {
     "type": "git",
