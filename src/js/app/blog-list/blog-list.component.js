@@ -1,16 +1,23 @@
 'use strict';
 
 angular.module('blogList').
-    controller('BlogListController', function ($scope) {
-        console.log('Controller called');
-        
-        $scope.sometext = "Just a little text....";
+    component('blogList', {
+        template: `
+        <div>
+            <h1>{{sometext}}</h1>
 
-        $scope.clicks = 0;
-        $scope.someClickHandler = function () {
-            console.log('button Clicked...');
+            <button ng-click='someClickHandler()'>Click me...</button>
+        </div>
+        `,
+        controller: function ($scope) {
+            $scope.sometext = "Just a little text....";
 
-            $scope.clicks++;
-            $scope.sometext = 'Button clicked ' + $scope.clicks + ' times!';
+            $scope.clicks = 0;
+            $scope.someClickHandler = function () {
+                console.log('button Clicked...');
+
+                $scope.clicks++;
+                $scope.sometext = 'Button clicked ' + $scope.clicks + ' times!';
+            }
         }
     });
