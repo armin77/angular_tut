@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('try').
-    config(function() {
-        console.log('CONFIG called');
-        
-    });
+  config(function() {
+    console.log('CONFIG called');
+    
+  });
