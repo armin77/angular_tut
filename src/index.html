@@ -4,20 +4,17 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <script src='angular/angular.min.js'></script>
+
     <script src='js/app/app.module.js'></script>
     <script src='js/app/app.config.js'></script>
+
+    <script src='js/app/blog-list/blog-list.module.js'></script>
+    <script src='js/app/blog-list/blog-list.component.js'></script>
 </head>
-<style>
-    .class1 {
-        color: red;
-    }
-</style>
+
 <body>
-    <h1 ng-class="{'class1': name=='test'}">Hello
-        <span ng-if='name'>{{name}}</span>
-        <span ng-if='!name'>World</span>
-        !
-    </h1>
-    <input type='text' ng-model='name'>
+    <div ng-controller="BlogListController">
+        <h1>{{sometext}}</h1>
+    </div>
 </body>
 </html>
