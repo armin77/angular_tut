@@ -7,26 +7,15 @@ angular.module('blogDetail').
       
       $scope.postNotFound = true;
 
-      console.log(Post.query());
-      //console.log(Post.get());
-      
-
-      //$http.get("/json/posts.json").then(successCallback, errorCallback);
-
-      function successCallback(response, status, config, statusText) {
-        _.each(response.data, post => {
+      Post.query((data) => {
+        _.each(data, post => {
 
           if (post.id == $routeParams.id) {
             $scope.postNotFound = false;
             $scope.post = post;
           }
         });
-      }
-
-      function errorCallback(response, status, config, statusText) {
-        console.log(response);
-      }
-
+      });
 
 
       // if ($scope.postNotFound) {
@@ -34,17 +23,6 @@ angular.module('blogDetail').
 
       //   $location.path('/');
       // }
-
-      // var blogItems = [
-      //   {title: 'someTitle', id: 1, description: 'this is the first description'},
-      //   {title: 'someOtherTitle', id: 2, description: 'this is the second description'},
-      //   {title: 'randomTitle', id: 3, description: 'this is the third description'},
-      //   {title: '4th-Title', id: 4, description: 'this is the forth description'},
-      //   {title: '5th-Title', id: 5, description: 'this is the fifth description'},
-      //   {title: 'lastTitle', id: 6, description: 'this is the sixth description'},
-      // ];
-
-
 
     }
   });

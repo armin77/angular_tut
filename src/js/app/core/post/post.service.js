@@ -7,6 +7,7 @@ angular.module('post')
       query: {
         method: "GET",
         isArray: true,
+        cache: true,
       },
       get: {
         method: "GET",
