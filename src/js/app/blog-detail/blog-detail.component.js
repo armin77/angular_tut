@@ -3,32 +3,44 @@
 angular.module('blogDetail').
   component('blogDetail', {
     templateUrl: 'templates/blog-detail.html',
-    controller: function ($scope, $routeParams, $location) {
+    controller: function ($http, $scope, $routeParams, $location) {
+      
+      $scope.postNotFound = true;
+      
 
-      console.log($routeParams);
+      $http.get("/json/posts.json").then(successCallback, errorCallback);
 
-      var blogItems = [
-        {title: 'someTitle', id: 1, description: 'this is the first description'},
-        {title: 'someOtherTitle', id: 2, description: 'this is the second description'},
-        {title: 'randomTitle', id: 3, description: 'this is the third description'},
-        {title: '4th-Title', id: 4, description: 'this is the forth description'},
-        {title: '5th-Title', id: 5, description: 'this is the fifth description'},
-        {title: 'lastTitle', id: 6, description: 'this is the sixth description'},
-      ];
+      function successCallback(response, status, config, statusText) {
+        console.log(response);
+      }
+      function errorCallback(response, status, config, statusText) {
+        console.log(response);
+      }
 
-      $scope.postFound = false;
 
-      _.each(blogItems, post => {
-        if (post.id == $routeParams.id) {
-          $scope.postFound = true;
-          $scope.post = post;
-        }
-      });
 
-      if (!$scope.postFound) {
+      if ($scope.postNotFound) {
         $scope.post = null;
 
         $location.path('/');
       }
+
+      // var blogItems = [
+      //   {title: 'someTitle', id: 1, description: 'this is the first description'},
+      //   {title: 'someOtherTitle', id: 2, description: 'this is the second description'},
+      //   {title: 'randomTitle', id: 3, description: 'this is the third description'},
+      //   {title: '4th-Title', id: 4, description: 'this is the forth description'},
+      //   {title: '5th-Title', id: 5, description: 'this is the fifth description'},
+      //   {title: 'lastTitle', id: 6, description: 'this is the sixth description'},
+      // ];
+
+
+      // _.each(blogItems, post => {
+      //   if (post.id == $routeParams.id) {
+      //     $scope.postFound = true;
+      //     $scope.post = post;
+      //   }
+      // });
+
     }
   });
