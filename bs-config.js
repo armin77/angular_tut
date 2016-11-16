@@ -23,6 +23,7 @@ module.exports = {
         routes: {
             "/static": "bower_components",
             "/js": "src/js",
+            "/json": "src/json",
             "/templates": "src/templates"
         },
         middleware: [ historyApiFallback() ]
