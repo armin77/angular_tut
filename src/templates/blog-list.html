@@ -2,7 +2,7 @@
 
 <ul ng-if='items.length > 0'>
   <li ng-repeat='item in items'>
-    <a ng-href="/blog/{{item.id}}">{{item.title}}</a>
+    <confirm-click post='item'></confirm-click>
   </li>
 </ul>
 
