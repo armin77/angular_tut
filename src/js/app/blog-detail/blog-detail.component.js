@@ -3,12 +3,15 @@
 angular.module('blogDetail').
   component('blogDetail', {
     templateUrl: 'templates/blog-detail.html',
-    controller: function ($http, $scope, $routeParams, $location) {
+    controller: function (Post, $http, $scope, $routeParams, $location) {
       
       $scope.postNotFound = true;
 
+      console.log(Post.query());
+      //console.log(Post.get());
+      
 
-      $http.get("/json/posts.json").then(successCallback, errorCallback);
+      //$http.get("/json/posts.json").then(successCallback, errorCallback);
 
       function successCallback(response, status, config, statusText) {
         _.each(response.data, post => {
