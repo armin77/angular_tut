@@ -2,31 +2,31 @@
   {
     "title": "someTitle",
     "id": 1,
-    "description": "thisisthefirstdescription",
+    "description": "thisisthefirstdescription"
   },
   {
     "title": "someOtherTitle",
     "id": 2,
-    "description": "thisistheseconddescription",
+    "description": "thisistheseconddescription"
   },
   {
     "title": "randomTitle",
     "id": 3,
-    "description": "thisisthethirddescription",
+    "description": "thisisthethirddescription"
   },
   {
     "title": "4th-Title",
     "id": 4,
-    "description": "thisistheforthdescription",
+    "description": "thisistheforthdescription"
   },
   {
     "title": "5th-Title",
     "id": 5,
-    "description": "thisisthefifthdescription",
+    "description": "thisisthefifthdescription"
   },
   {
     "title": "lastTitle",
     "id": 6,
     "description": "thisisthesixthdescription"
-  },
+  }
 ]
