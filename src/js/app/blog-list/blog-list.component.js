@@ -3,7 +3,10 @@
 angular.module('blogList').
   component('blogList', {
     templateUrl: 'templates/blog-list.html',
-    controller: function ($scope) {
+    controller: function ($scope, $routeParams) {
+
+      console.log($routeParams);
+      
 
       var blogItems = [
         {title: 'someTitle', id: 1, description: 'this is the first description'},
