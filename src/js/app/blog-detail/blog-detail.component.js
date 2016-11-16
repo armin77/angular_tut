@@ -6,24 +6,31 @@ angular.module('blogDetail').
     controller: function ($http, $scope, $routeParams, $location) {
       
       $scope.postNotFound = true;
-      
+
 
       $http.get("/json/posts.json").then(successCallback, errorCallback);
 
       function successCallback(response, status, config, statusText) {
-        console.log(response);
+        _.each(response.data, post => {
+
+          if (post.id == $routeParams.id) {
+            $scope.postNotFound = false;
+            $scope.post = post;
+          }
+        });
       }
+
       function errorCallback(response, status, config, statusText) {
         console.log(response);
       }
 
 
 
-      if ($scope.postNotFound) {
-        $scope.post = null;
+      // if ($scope.postNotFound) {
+      //   $scope.post = null;
 
-        $location.path('/');
-      }
+      //   $location.path('/');
+      // }
 
       // var blogItems = [
       //   {title: 'someTitle', id: 1, description: 'this is the first description'},
@@ -35,12 +42,6 @@ angular.module('blogDetail').
       // ];
 
 
-      // _.each(blogItems, post => {
-      //   if (post.id == $routeParams.id) {
-      //     $scope.postFound = true;
-      //     $scope.post = post;
-      //   }
-      // });
 
     }
   });
