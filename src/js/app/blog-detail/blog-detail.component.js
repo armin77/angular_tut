@@ -3,7 +3,7 @@
 angular.module('blogDetail').
   component('blogDetail', {
     templateUrl: 'templates/blog-detail.html',
-    controller: function ($scope, $routeParams) {
+    controller: function ($scope, $routeParams, $location) {
 
       console.log($routeParams);
 
@@ -27,6 +27,8 @@ angular.module('blogDetail').
 
       if (!$scope.postFound) {
         $scope.post = null;
+
+        $location.path('/');
       }
     }
   });
