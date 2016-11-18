@@ -1,8 +1,12 @@
 [
   {
-    "title": "someTitle",
+    "title": "First Entry",
     "id": 1,
-    "description": "thisisthefirstdescription"
+    "description": "This is the first description",
+    "comments": [
+      {"id": 1, "text": "First comment"},
+      {"id": 2, "text": "Nice Article..."}
+    ]
   },
   {
     "title": "someOtherTitle",

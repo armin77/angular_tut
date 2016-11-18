@@ -1,3 +1,7 @@
 <h1>{{post.title}}</h1>
 
 <p>{{post.description}}</p>
+
+<ul>
+  <li ng-repeat="comment in post.comments">{{comment.text}}</li>
+</ul>
