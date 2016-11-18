@@ -13,16 +13,28 @@ angular.module('blogDetail').
           if (post.id == $routeParams.id) {
             $scope.postNotFound = false;
             $scope.post = post;
+
+            if ($scope.post.comments === undefined) {
+              $scope.post.comments = [];
+            }
+
+            resetReply();
           }
         });
       });
 
+      $scope.addReply = function () {
+        $scope.post.comments.push($scope.reply);
 
-      // if ($scope.postNotFound) {
-      //   $scope.post = null;
+        resetReply();
+      }
 
-      //   $location.path('/');
-      // }
+      function resetReply() {
+        $scope.reply = {
+          id: $scope.post.comments.length + 1,
+          text: ""
+        }
+      }
 
     }
   });
