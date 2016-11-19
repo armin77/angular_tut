@@ -21,7 +21,11 @@
   {
     "title": "4th-Title",
     "id": 4,
-    "description": "thisistheforthdescription"
+    "description": "thisistheforthdescription",
+    "comments": [
+      {"id": 1, "text": "A comment"},
+      {"id": 2, "text": "Some words about this..."}
+    ]
   },
   {
     "title": "5th-Title",
