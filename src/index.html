@@ -32,10 +32,26 @@
 </head>
 
 <body>
-  <div><navigation/></div>
+  <div class="content">
 
-  <div ng-view></div>
+    <div class="row">
+      <navigation/>
+    </div>
 
-  <div>Footer</div>
+    <div class="row">
+      <div class="col-md-12" ng-view></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12" style="background: #666;p_osition: absolute; bottom:0px; min-height: 4em; padding: 2em; color: #aaa; text-align:center;">
+        <div class="row">
+          <div class="col-md-4">Footer Column_1</div>
+          <div class="col-md-4">Footer Column_2</div>
+          <div class="col-md-4">Footer Column_3</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </body>
 </html>
