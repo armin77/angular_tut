@@ -6,7 +6,6 @@ angular.module('footerlinks').
     controller: function (Footer, $scope, $routeParams) {
 
       Footer.query((data) => {
-        
         $scope.items = data;
       });
 
