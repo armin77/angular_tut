@@ -1,5 +1,8 @@
 <div class="col-md-12" style='background: #eee;'>
   <ul ng-if='items.length > 0' style='padding: 8px;'>
+    <li style='display: inline; margin: 2px 5px; border: 2px solid #f66; padding: 4px; border-radius:4px;'>>
+      <a href="/" style="text-decoration: none;">Home</a>
+    </li>
     <li ng-repeat='item in items'
         style='display: inline; margin: 2px 5px; border: 1px solid #bbb; padding: 4px; border-radius:4px;'>
       <a href="/blog/{{item.id}}" style="text-decoration: none;">{{item.title}}</a>
