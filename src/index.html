@@ -18,11 +18,17 @@
   <script src='js/app/utils/confirm-click/confirm-click.module.js'></script>
   <script src='js/app/utils/confirm-click/confirm-click.directive.js'></script>
 
+  <script src='js/app/core/footer/footer.module.js'></script>
+  <script src='js/app/core/footer/footer.service.js'></script>
+
   <script src='js/app/core/post/post.module.js'></script>
   <script src='js/app/core/post/post.service.js'></script>
 
   <script src='js/app/navigation/navigation.module.js'></script>
   <script src='js/app/navigation/navigation.component.js'></script>
+
+  <script src='js/app/footerlinks/footerlinks.module.js'></script>
+  <script src='js/app/footerlinks/footerlinks.component.js'></script>
 
   <script src='js/app/blog-detail/blog-detail.module.js'></script>
   <script src='js/app/blog-detail/blog-detail.component.js'></script>
@@ -43,13 +49,7 @@
     </div>
 
     <div class="row">
-      <div class="col-md-12" style="background: #666;p_osition: absolute; bottom:0px; min-height: 4em; padding: 2em; color: #aaa; text-align:center;">
-        <div class="row">
-          <div class="col-md-4">Footer Column_1</div>
-          <div class="col-md-4">Footer Column_2</div>
-          <div class="col-md-4">Footer Column_3</div>
-        </div>
-      </div>
+      <footerlinks/>
     </div>
 
   </div>
