@@ -4,8 +4,8 @@
 
 <h3>Comments</h3>
 <ul>
-  <li>
-    <input type="text" ng-model="query" placeholder="filter"/>
+  <li style="list-style: none">
+    <span class="glyphicon glyphicon-filter"> </span>&nbsp;&nbsp;<input type="text" ng-model="query" placeholder="filter"/>
   </li>
   <li ng-repeat="comment in post.comments | filter: query">
     {{comment.text}}
