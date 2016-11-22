@@ -35,23 +35,31 @@
 
   <script src='js/app/blog-list/blog-list.module.js'></script>
   <script src='js/app/blog-list/blog-list.component.js'></script>
+
+  <style>
+
+    .content {
+      padding: 70px 0;
+    }
+  </style>
 </head>
 
 <body>
-  <div class="content">
-
-    <div class="row">
+    <div class="">
       <navigation/>
     </div>
 
-    <div class="row">
-      <div class="col-md-12" ng-view></div>
+  <div class="container">
+    <div class="content">
+      <div class="row">
+        <div class="col-md-12" ng-view></div>
+      </div>
     </div>
-
-    <div class="row">
-      <footerlinks/>
-    </div>
-
   </div>
+
+  <div class="">
+    <footerlinks/>
+  </div>
+
 </body>
 </html>

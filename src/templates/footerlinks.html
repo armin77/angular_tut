@@ -1,25 +1,35 @@
-<div class="col-md-12" style="background: #666;p_osition: absolute; bottom:0px; min-height: 4em; padding: 2em; color: #aaa; text-align:center;">
-  <div class="row">
-    <div class="col-md-4">
-      <ul>
-        <li ng-repeat="left in items.left" style="list-style-type: none;">
-          {{ left }}
-        </li>
-      </ul>
-    </div>
-    <div class="col-md-4">
-      <ul>
-        <li ng-repeat="middle in items.middle" style="list-style-type: none;">
-          {{ middle }}
-        </li>
-      </ul>
-    </div>
-    <div class="col-md-4">
-      <ul>
-        <li ng-repeat="right in items.right" style="list-style-type: none;">
-          {{ right }}
-        </li>
-      </ul>
+<style>
+  .footer-item {
+     list-style-type: none;
+     text-align: center;
+     color: #999
+  }
+</style>
+
+<div class="navbar navbar-default navbar-fixed-bottom visible-md-block visible-lg-block">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <ul>
+          <li ng-repeat="left in items.left" class="footer-item">
+            {{ left }}
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <ul>
+          <li ng-repeat="middle in items.middle" class="footer-item">
+            {{ middle }}
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <ul>
+          <li ng-repeat="right in items.right" class="footer-item">
+            {{ right }}
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
