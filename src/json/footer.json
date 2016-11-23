@@ -1,16 +1,16 @@
 {
   "left": [
-    "first-entry",
-    "second-entry"
+    { "title": "first-entry", "link": "#"},
+    { "title": "second-entry", "link": "#"}
   ],
   "middle": [
-    "mid-first",
-    "mid-second",
-    "mid-third"
+    { "title": "mid-first", "link": "#"},
+    { "title": "goto Entry 4", "link": "/blog/4"},
+    { "title": "mid-third", "link": "#"}
   ],
   "right": [
-    "right 1111",
-    "right 22",
-    "right 333"
+    { "title": "google", "link": "http://www.google.com"},
+    { "title": "right 22", "link": "#"},
+    { "title": "Home", "link": "/"}
   ]
 }

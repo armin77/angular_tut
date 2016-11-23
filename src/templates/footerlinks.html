@@ -12,21 +12,21 @@
       <div class="col-md-4">
         <ul>
           <li ng-repeat="left in items.left" class="footer-item">
-            {{ left }}
+            <a href="{{ left.link }}">{{ left.title }}</a>
           </li>
         </ul>
       </div>
       <div class="col-md-4">
         <ul>
           <li ng-repeat="middle in items.middle" class="footer-item">
-            {{ middle }}
+            <a href="{{ middle.link }}">{{ middle.title }}</a>
           </li>
         </ul>
       </div>
       <div class="col-md-4">
         <ul>
           <li ng-repeat="right in items.right" class="footer-item">
-            {{ right }}
+            <a href="{{ right.link }}">{{ right.title }}</a>
           </li>
         </ul>
       </div>
